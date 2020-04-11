@@ -19,7 +19,7 @@ export default function App() {
     api.get('repositories').then(response => {
       setRepositories(response.data);
   });
-  }, []);
+  }, [repositories]);
 
   async function handleLikeRepository(id) {
     const response = await api.post(`repositories/${id}/like`);
